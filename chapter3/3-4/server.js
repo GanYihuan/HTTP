@@ -19,7 +19,7 @@ http
         // 浏览器允许跨域
         'Content-Type': 'text/javascript',
         // 从客户端缓存里面读数据
-        'Cache-Control': 'max-age=200'
+        'Cache-Control': 'max-age=200, public'
       })
       response.end('console.log("script loaded 2")')
     }
