@@ -5,11 +5,13 @@ http
   .createServer(function (request, response) {
     console.log('request come', request.url)
     const html = fs.readFileSync('test.html', 'utf-8')
-    const img = fs.readFileSync('../3-3/3-3-01.png')
+    const img = fs.readFileSync('test.png')
     if (request.url === '/') {
       const html = fs.readFileSync('test.html', 'utf-8')
       response.writeHead(200, {
         'Content-Type': 'text/html'
+        // 关闭长连接
+        // 'Connection': 'close'
       })
       response.end(html)
     } else {

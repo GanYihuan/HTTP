@@ -12,7 +12,7 @@ http
       if (host === 'text.com') {
         response.writeHead(200, {
           'Content-Type': 'text/html',
-          // ;HttpOnly   禁止 js 访问 cookie
+          // HttpOnly   禁止 js 访问 cookie
           // cookie 不能跨域设置 cookie
           // domain 访问限制, 使二级域名能共享 cookie
           'Set-Cookie': ['id=123; max-age=2', 'abc=456; domain=test.com']
