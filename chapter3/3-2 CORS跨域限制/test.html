@@ -1,22 +1,18 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-
 <body></body>
-
 <script>
   let xhr = new XMLHttpRequest()
+  // 8888 向 8887 发了一个请求, 会造成跨域请求
   xhr.open('GET', 'http://127.0.0.1:8887')
   xhr.send()
 </script>
-
-<!-- jsonp: script 标签加载连接请求服务器，返回了内容，script 标签里写可执行的代码，调用 jsonp 发请求前内容 -->
+<!-- jsonp: script 标签加载连接请求服务器，返回内容写 script 标签代码，调用 jsonp 发请求前他给我们设置的内容 -->
 <script src="http://127.0.0.1:8887"></script>
-
 </html>

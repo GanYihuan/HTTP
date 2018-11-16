@@ -6,7 +6,7 @@ http
 
     if (request.url === '/') {
       // 302 临时跳转
-      // 301 跳转(不可控), 永久
+      // 301 永久跳转(不可控)
       response.writeHead(302, {
         'Location': '/new'
       })

@@ -7,8 +7,12 @@ http
     response.writeHead(200, {
       // 浏览器允许跨域
       'Access-Control-Allow-Origin': '*',
+      // 跨域 浏览器允许的请求头
       'Access-Control-Allow-Headers': 'X-Test-Cors',
-      'Access-Control-Allow-Methods': 'POST, PUT, Delete'
+      // 跨域 浏览器允许的请求方法
+      'Access-Control-Allow-Methods': 'POST, PUT, Delete',
+      // 可以用上面方式请求最长时间 1000 s 
+      'Access-Control-Max-Age': '1000'
     })
     response.end('123')
   })

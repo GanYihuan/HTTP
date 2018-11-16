@@ -8,7 +8,6 @@ http
     if (request.url === '/') {
       const html = fs.readFileSync('test.html', 'utf-8')
       response.writeHead(200, {
-        // 浏览器允许跨域
         'Content-Type': 'text/html'
       })
       response.end(html)
@@ -16,7 +15,6 @@ http
 
     if (request.url === '/script.js') {
       response.writeHead(200, {
-        // 浏览器允许跨域
         'Content-Type': 'text/javascript',
         // 从客户端缓存里面读数据
         'Cache-Control': 'max-age=200, public'

@@ -5,10 +5,8 @@ http
     console.log('request come', request.url)
 
     response.writeHead(200, {
-      // 浏览器允许跨域
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': 'X-Test-Cors',
-      'Access-Control-Allow-Methods': 'POST, PUT, Delete'
+      // 浏览器允许跨域， * 任何域名都允许
+      'Access-Control-Allow-Origin': '*'
     })
     response.end('123')
   })

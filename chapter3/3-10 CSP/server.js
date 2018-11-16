@@ -10,8 +10,13 @@ http
       response.writeHead(200, {
         'Content-Type': 'text/html',
         // [内容安全策略]()
-        // 限制 script 插入, 允许 http, https, \'self\' 只允许本站提供的外链脚本
-        'Content-Security-Policy': 'default-src http: https: \'self\'; form-action \'self\'; report-uri /report'
+        // script-src: 限制 script 插入, 防 XSS
+        // 允许 http, https 加载,
+        // \'self\' 只允许本域名 js 加载
+        // 写域名: 允许该域名加载
+        // form-action \'self\' 限制 form 表单提交
+        // report-uri /report  汇报情况
+        // 'Content-Security-Policy': 'default-src http: https: \'self\'; form-action \'self\'; report-uri /report'
       })
       response.end(html)
     } else {

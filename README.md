@@ -1,5 +1,11 @@
 # imooc-http
 
+## 运行
+
+```console
+nodemon server.js
+```
+
 ## curl 发请求接受和返回
 
 ```console
