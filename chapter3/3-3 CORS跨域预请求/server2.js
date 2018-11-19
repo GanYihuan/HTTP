@@ -8,6 +8,7 @@ http
       // 浏览器允许跨域
       'Access-Control-Allow-Origin': '*',
       // 跨域 浏览器允许的请求头
+      // request-method: options  允许下次发送的请求
       'Access-Control-Allow-Headers': 'X-Test-Cors',
       // 跨域 浏览器允许的请求方法
       'Access-Control-Allow-Methods': 'POST, PUT, Delete',
