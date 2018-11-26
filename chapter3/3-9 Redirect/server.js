@@ -1,14 +1,14 @@
 ﻿const http = require('http')
 
 http
-  .createServer(function (request, response) {
+  .createServer(function(request, response) {
     console.log('request come', request.url)
 
     if (request.url === '/') {
       // 302 临时跳转
       // 301 永久跳转(不可控)
       response.writeHead(302, {
-        'Location': '/new'
+        Location: '/new'
       })
       response.end('')
     }

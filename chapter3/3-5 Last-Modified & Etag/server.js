@@ -2,7 +2,7 @@
 const fs = require('fs')
 
 http
-  .createServer(function (request, response) {
+  .createServer(function(request, response) {
     console.log('request come', request.url)
 
     if (request.url === '/') {
@@ -24,7 +24,7 @@ http
           // 上次修改时间, 验证资源是否需要更新
           'Last-Modified': '123',
           // 数据签名, 是否使用缓存
-          'Etag': '777'
+          Etag: '777'
         })
         response.end('123')
       } else {
@@ -32,7 +32,7 @@ http
           'Content-Type': 'text/javascript',
           'Cache-Control': 'max-age=200000, no-cache',
           'Last-Modified': '123',
-          'Etag': '777'
+          Etag: '777'
         })
         response.end('console.log("script loaded 2")')
       }

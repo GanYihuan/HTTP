@@ -2,7 +2,7 @@
 const fs = require('fs')
 
 http
-  .createServer(function (request, response) {
+  .createServer(function(request, response) {
     console.log('request come', request.url)
 
     if (request.url === '/') {
@@ -16,7 +16,7 @@ http
         // 写域名: 允许该域名加载
         // form-action \'self\' 限制 form 表单提交
         // report-uri /report  汇报情况
-        'Content-Security-Policy': 'default-src http: https: \'self\'; form-action \'self\'; report-uri /report'
+        'Content-Security-Policy': "default-src http: https: 'self'; form-action 'self'; report-uri /report"
       })
       response.end(html)
     } else {

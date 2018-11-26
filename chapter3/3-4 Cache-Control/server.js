@@ -2,7 +2,7 @@
 const fs = require('fs')
 
 http
-  .createServer(function (request, response) {
+  .createServer(function(request, response) {
     console.log('request come', request.url)
 
     if (request.url === '/') {

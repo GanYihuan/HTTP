@@ -2,7 +2,7 @@
 const fs = require('fs')
 
 http
-  .createServer(function (request, response) {
+  .createServer(function(request, response) {
     console.log('request come', request.url)
 
     const html = fs.readFileSync('test.html', 'utf-8')
