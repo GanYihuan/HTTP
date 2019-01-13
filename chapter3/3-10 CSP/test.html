@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta http-equiv="Content-Security-Policy" content="default-src http: https: 'self'; form-action 'self'; report-uri /report" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src http: https: 'self'; form-action 'self'; report-uri /report"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -12,8 +15,8 @@
     <form action="http://baidu.com"><button type="submit">submit</button></form>
     <img src="http://baidu.com" alt="" />
     <script>
-      console.log('inline js')
-      fetch('http://baidu.com')
+      console.log("inline js");
+      fetch("http://baidu.com");
     </script>
     <script src="./server2.js"></script>
   </body>

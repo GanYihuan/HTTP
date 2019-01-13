@@ -1,24 +1,24 @@
-﻿const http = require('http')
+﻿const http = require("http");
 
 http
   .createServer(function(request, response) {
-    console.log('request come', request.url)
+    console.log("request come", request.url);
 
-    if (request.url === '/') {
+    if (request.url === "/") {
       // 302 临时跳转
       // 301 永久跳转(不可控)
       response.writeHead(302, {
-        Location: '/new'
-      })
-      response.end('')
+        Location: "/new"
+      });
+      response.end("");
     }
-    if (request.url === '/new') {
+    if (request.url === "/new") {
       response.writeHead(200, {
-        'Content-Type': 'text/html'
-      })
-      response.end('<div>this is content</div>')
+        "Content-Type": "text/html"
+      });
+      response.end("<div>this is content</div>");
     }
   })
-  .listen(8888)
+  .listen(8888);
 
-console.log('server listen 8888')
+console.log("server listen 8888");
