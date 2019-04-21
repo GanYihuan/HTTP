@@ -9,10 +9,8 @@ http
     const html = fs.readFileSync("test.html");
     response.writeHead(200, {
       "Content-Type": "text/html",
-      // 不要浏览器猜测返回内容
-      "X-Content-Type-Options": "nosniff",
-      // 压缩
-      "Content-Encoding": "gzip"
+      "X-Content-Type-Options": "nosniff", // 不要浏览器猜测返回内容
+      "Content-Encoding": "gzip" // 压缩
     });
     response.end(zlib.gzipSync(html));
   })

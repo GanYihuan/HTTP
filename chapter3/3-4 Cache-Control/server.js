@@ -14,8 +14,7 @@ http
     if (request.url === "/script.js") {
       response.writeHead(200, {
         "Content-Type": "text/javascript",
-        // 从客户端缓存里面读数据
-        "Cache-Control": "max-age=200, public"
+        "Cache-Control": "max-age=200, public" // 从客户端缓存里面读数据
       });
       response.end('console.log("script loaded 2")');
     }

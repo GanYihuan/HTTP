@@ -14,17 +14,13 @@ http
     }
 
     if (request.url === "/script.js") {
-      // 读取 Etag
-      const etag = request.headers["if-none-match"];
+      const etag = request.headers["if-none-match"]; // 读取 Etag
       if (etag === "777") {
-        // 304: 资源没修改能直接读缓存
-        response.writeHead(304, {
+        response.writeHead(304, { // 304: 资源没修改能直接读缓存
           "Content-Type": "text/javascript",
           "Cache-Control": "max-age=200000, no-cache",
-          // 上次修改时间, 验证资源是否需要更新
-          "Last-Modified": "123",
-          // 数据签名, 是否使用缓存
-          Etag: "777"
+          "Last-Modified": "123", // 上次修改时间, 验证资源是否需要更新
+          Etag: "777" // 数据签名, 是否使用缓存
         });
         response.end("123");
       } else {

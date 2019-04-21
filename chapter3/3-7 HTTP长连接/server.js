@@ -10,9 +10,8 @@ http
     if (request.url === "/") {
       const html = fs.readFileSync("test.html", "utf-8");
       response.writeHead(200, {
-        "Content-Type": "text/html"
-        // 关闭长连接
-        // 'Connection': 'close'
+        "Content-Type": "text/html",
+        'Connection': 'close' // 关闭长连接
       });
       response.end(html);
     } else {
