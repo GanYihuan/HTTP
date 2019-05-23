@@ -1,5 +1,5 @@
 ﻿const http = require("http");
-const fs = require("fs");
+const fs = require("fs"); // fs模块提供了一个API，用于以一种紧密围绕标准POSIX函数建模的方式与文件系统交互。
 
 http
   .createServer(function(request, response) {
